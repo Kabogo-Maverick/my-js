@@ -1,45 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Table Example</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Test</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
-    <table id="jsTable"></table>
+
+    <p id="ken"></p> <!-- This will display the output -->
 
     <script>
-        const tableData = [
-            ["", "Scope", "Redeclare", "Reassign", "Hoisted", "Binds this"],
-            ["var", "No", "Yes", "Yes", "Yes", "Yes"],
-            ["let", "Yes", "No", "Yes", "No", "No"],
-            ["const", "Yes", "No", "No", "No", "No"]
-        ];
-
-        const table = document.getElementById("jsTable");
-        
-        tableData.forEach((rowData, index) => {
-            let row = table.insertRow();
-            rowData.forEach(cellData => {
-                let cell = index === 0 ? document.createElement("th") : document.createElement("td");
-                cell.textContent = cellData;
-                row.appendChild(cell);
-            });
-        });
+        let fruits = ["apple", "oranges", "melon"];
+        document.getElementById("ken").innerHTML = fruits.join(", ") + "<br>" + fruits[0];
     </script>
+
 </body>
 </html>
