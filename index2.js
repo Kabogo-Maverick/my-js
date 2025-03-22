@@ -50,3 +50,11 @@ let names = ["ken","bob","ant","wan","kin","pan"]
 let select = names.slice(2, 5)
 document.getElementById("demo6").innerHTML=select
      // Selects ["ant", "wan", "kin"]
+
+let mine = "eve"
+let yours = "adam"
+let all =`welcome ${mine},${yours}`
+document.getElementById("demo7").innerHTML=all
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo8").innerHTML = fruits.join(" / ");
