@@ -1,60 +1,82 @@
-function productfn(x,y){
-    return x*y
+//if  else statement
+let hour = 18;
+let greeting;
+if (hour < 12 ){
+    greeting = "Good day"
+} else {
+    greeting = "Good night"
 }
-let result = productfn(20,30)
-document.getElementById("demo1").innerHTML=result
-console.log(result) 
+document.getElementById("greet").innerHTML=greeting
 
-
-
-const student = {}
-student.first= "Helen"
-student.last="Kimani"
-student.age = 40
-student.location="Othaya"
-document.getElementById("demo2").innerHTML=JSON.stringify(student)
-console.log(student)
+// for loops
+let  cars = ["honda","vitz","wagon","prado","subaru","jeep"];
+let text =""
+for (let i=0; i < cars.length; i++){
+    text += cars[i] + "<br>"
+}
+document.getElementById("sale").innerHTML=cars
 
 
 
 
-const person = {
-    firstName: "Noah",
-    lastName : "Lyles",
-    age      : 29,
-    fullName : function() {
-      return this.firstName + " " + this.lastName + " is "+" "+ this.age;
-    }
-  };
-  document.getElementById("demo3").innerHTML = person.fullName()
-  console.log(person)
+
+let textb = "";
+
+for (let i = 0; i < 5; i++) {
+  textb += "The number is " + i + "<br>";
+}
+document.getElementById("no").innerHTML = textb;
 
 
-// when you want to delete sth
-      //   delete person.age;
+//FOR IN LOOP
+
+//The JavaScript for in statement loops 
+// through the properties of an Object
+
+const person = {fname:"Alex", lname:"Joe", age:35}; 
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+document.getElementById("for-in").innerHTML = txt;
+
+
+//ARRAY FOR EACH
+
+const numbers = [45, 4, 9, 16, 25];
+
+let txt2 = "";
+numbers.forEach(myFunction);
+document.getElementById("for-each").innerHTML = txt2;
+
+function myFunction(value) {
+  txt2 += value + "<br>"; 
+}
 
 
 
-const mywan = Object.values(person)
-console.log(mywan)
-//   document.getElementById("demo3").innerHTML = mywan
+// FOR OF LOOP
+const cars2 = ["BMW", "Volvo", "Mini"];
+
+let text3 = "";
+for (let x of cars2) {
+  text3 += x + "<br>";
+}
+
+document.getElementById("for-of").innerHTML = text3;
 
 
 
-//json stringify
-// Display JSON
-document.getElementById("demo4").innerHTML = JSON.stringify(person);
-      //output {"firstName":"Noah","lastName":"Lyles","age":29}
 
-let names = ["ken","bob","ant","wan","kin","pan"]
-let select = names.slice(2, 5)
-document.getElementById("demo6").innerHTML=select
-     // Selects ["ant", "wan", "kin"]
+//WHILE LOOP
+const cars4 = ["BMW", "Volvo", "Saab", "Ford"];
 
-let mine = "eve"
-let yours = "adam"
-let all =`welcome ${mine},${yours}`
-document.getElementById("demo7").innerHTML=all
+let i = 0;
+let text4 = "";
+for (;cars4[i];) {
+  text4 += cars4[i] + "<br>";
+  i++;
+}
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo8").innerHTML = fruits.join(" / ");
+document.getElementById("while").innerHTML = text4;
