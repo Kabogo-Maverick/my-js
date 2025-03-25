@@ -8,6 +8,9 @@ if (hour < 12 ){
 }
 document.getElementById("greet").innerHTML=greeting
 
+
+
+
 // for loops
 let  cars = ["honda","vitz","wagon","prado","subaru","jeep"];
 let text =""
@@ -18,14 +21,14 @@ document.getElementById("sale").innerHTML=cars
 
 
 
-
-
 let textb = "";
 
 for (let i = 0; i < 5; i++) {
   textb += "The number is " + i + "<br>";
 }
 document.getElementById("no").innerHTML = textb;
+
+
 
 
 //FOR IN LOOP
@@ -68,8 +71,15 @@ document.getElementById("for-of").innerHTML = text3;
 
 
 
+// another for loop for phones
+const phones = ["iphone","samsung","oppo","tecno"]
+let phonetext =""
+for (let x of phones){
+    phonetext += x + "<br>"
+}
+document.getElementById("phones").innerHTML = phonetext
 
-//WHILE LOOP
+//FOR LOOP ANOTHER ONE
 const cars4 = ["BMW", "Volvo", "Saab", "Ford"];
 
 let i = 0;
@@ -80,3 +90,18 @@ for (;cars4[i];) {
 }
 
 document.getElementById("while").innerHTML = text4;
+
+
+
+//WHILE LOOP
+const phones1 = ["iPhone", "Samsung", "OnePlus", "Google Pixel", "Xiaomi"];
+let p = 0; 
+let phoneList = ""; 
+
+while (p < phones1.length) {  
+  phoneList += phones1[p] + "<br>"; 
+  p++; 
+}
+
+document.getElementById("pop").innerHTML = phoneList; 
+
